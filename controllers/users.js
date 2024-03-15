@@ -61,6 +61,7 @@ async function signup(req, res) {
       res.json({ token }); // set('toJSON',) in user model is being called, and deleting the users password from the token
     } catch (err) {
       // Probably a duplicate email
+      console.log(err)
       res.status(400).json(err);
     }
 
